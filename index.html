@@ -4,51 +4,79 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
   <title>LG</title>
 </head>
 <body>
   <div class="wrap">
+    <div class="inner">
+    <!--
+      // header //
+      - language
+      - logo
+    -->
     <header>
       <div class="langBtnWrap flex">
-        <ul class="langCont">
-          <li>Korea, 한국어</li>
-          <li class="hide">English, 영어</li>
-        </ul>
+        <div class="langBtnInner">
+          <ul class="langCont">
+            <li>Korea, 한국어</li>
+            <li class="hide">English, 영어</li>
+          </ul>
+        </div>
         <div class="langDownBtn"></div>
       </div>
-      <div class="logoWrap">LG</div>
-    </header>
-    <section>
-      <div>
-        <input type="text" placeholder="이메일 아이디 또는 휴대폰 번호 아이디">
-        <div>
-          <input type="text" placeholder="비밀번호">
-            <span class="psShowHide"></span>
-          </div>
+      <div class="logoWrap">
+        <a href="/"><img src="/img/img_logo.png" alt="LG 바로가기" class="logo"></a>
       </div>
-        <div class="loginBtn">
-          <button>로그인</button>
-          <ul>
-            <li><a href="#">아이디 찾기</a></li>
-            <li><a href="#">비밀번호 재설정</a></li>
-            <li><a href="#">회원가입</a></li>
+    </header>
+    <!--
+      // section //
+      - login
+      - password
+      - button
+    -->
+    <section>
+      <form action="">
+        <div>
+          <label for="userId">이메일 아이디 또는 휴대폰 번호 아이디</label>
+          <input type="text" id="userId" name="userId" placeholder="아이디 입력">
+        </div>
+        <div>
+          <label for="userPassword">비밀번호</label>
+          <input id="" type="text" id="userPassword" name="userPassword" placeholder="비밀번호 입력">
+          <span class="passwordShowHide"></span>
+          </div>
+        <div class="loginBtnWrap">
+          <button class="loginBtn">로그인</button>
+          <ul class="findInfoWrap flex">
+            <li class="findInfoList"><a href="#" class="findInfo">아이디 찾기</a></li>
+            <li class="findInfoList"><a href="#" class="findInfo">비밀번호 재설정</a></li>
+            <li class="findInfoList"><a href="#" class="findInfo">회원가입</a></li>
           </ul>
         </div>
+      </form>
     </section>
+    <!--
+      // footer //
+      - login button
+      - sns button
+    -->
     <footer>
       <div>
-        <button>MY LG 로그인</button>
+        <button class="myLgBtn flex"><span class="my">MY</span><span class="lg">LG</span><img src="/img/img_id.png" alt="id" class="imgId"><span class="myLgLogin">로그인</span></button>
         <div>
-          <ul>
-            <li>카카오톡 로그인</li>
-            <li>네이버 로그인</li>
-            <li>애플 로그인</li>
+          <ul class="snsLoginWrap flex">
+            <li class="snsLinkList"><a href="#" class="snsLink"><img src="/img/img_kakaotalk.png" alt="카카오톡 로그인" class="snsImg"></a></li>
+            <li class="snsLinkList"><a href="#" class="snsLink"><img src="/img/img_naver.png" alt="네이버 로그인" class="snsImg"></a></li>
+            <li class="snsLinkList"><a href="#" class="snsLink"><img src="/img/img_apple.png" alt="애플 로그인" class="snsImg"></a></li>
           </ul>
         </div>
-        <div>다른 계정 로그인<span></span></div>
+        <div class="anotherSnsBtn"><span class="anotherSns">다른 계정으로 로그인</span></div>
       </div>
-      <div>로딩 아이콘</div>
+      <div class="hide">로딩 아이콘</div>
     </footer>
+  </div>
   </div>
 </body>
 </html>

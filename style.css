@@ -1,48 +1,223 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  a {
+      color: #fff;
+    text-decoration: none;
+  }
+  
+  label {
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    height: 34px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #424242;
+    
+  }
+
+  input::placeholder {
+    color: transparent;
+  }
+  
+  button {
+    all: unset;
+  }
+  
+  .wrap {
+    width: 360px;
+    max-height: 780px;
+    border: 1px solid #fff;
+    background-color: #000;
+  }
+
+  .inner {
+    width: calc(100% - 21px);
+    height: 100vh;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding-top: 51px;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .langBtnWrap {
+    cursor: pointer;
+    justify-content: flex-end;
+  }
+  
+  .langCont {
+    border: .5px solid #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 9px 16px;
+    padding-right: 35px;
+    font-size: 9px;
+    box-sizing: border-box;
+  }
+  
+  .langDownBtn {
+      position: relative;
+  }
+  
+  .langDownBtn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  
+  .langDownBtn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+  }
+
+  .logoWrap {
+    padding: 28px 0 37px 0;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .loginBtn {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    font-size: 12px;
+    color: #a3a3a3;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0 6px 0;
+  }
+
+  .findInfoWrap {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .findInfoList:nth-child(2) {
+    position: relative;
+    padding: 0 14px;
+  }
+
+  .findInfoList:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 12px;
+    background-color: #969696;
+  }
+
+  .findInfoList:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 6px;
+    width: 2px;
+    height: 12px;
+    background-color: #969696;
+  }
+
+  .findInfo {
+    display: block;
+    font-size: 11px;
+    color: #969696;
+  }
+
+.myLgBtn {
+  width: 100%;
+  height: 41px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
-ol, ul {
-	list-style: none;
+
+.myLgBtn span {
+  display: block;
 }
-blockquote, q {
-	quotes: none;
+
+.myLgBtn span:nth-child(2) {
+  padding: 0 4px;
+
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.my {
+  color: #767676;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+.lg {
+  color: #9f0032;
+}
+
+.myLgLogin {
+  color: #c94d80;
+}
+
+.imgId {
+  width: 14px;
+  height: 13px;
+  padding: 1px 4px 0 0;
+}
+
+.snsLoginWrap {
+  margin: 18px 0 21px 0;
+  justify-content: center;
+}
+
+.snsLinkList:nth-child(2) {
+  margin: 0 20px;
+}
+
+.anotherSnsBtn {
+  text-align: center;
+}
+
+.anotherSns {
+  position: relative;
+  font-size: 10px;
+  color: #5f5f5f;
+}
+
+.anotherSns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  transform: translateY(50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #5f5f5f;
+  border-right: 2px solid #5f5f5f;
 }
