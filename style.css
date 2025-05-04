@@ -2,6 +2,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -88,7 +89,7 @@ body {
   .dropDownMenu {
     position: absolute;
     left: 0;
-    bottom: 33px;
+    bottom: -812px;
     width: 100%;
     background-color: #2b2b2b;
     z-index: 1;
@@ -97,8 +98,7 @@ body {
   }
 
   .dropDownMenu.active {
-    bottom: auto;
-    top: 0;
+    bottom: 33px;
   }
 
   .dropDownListTitle {
