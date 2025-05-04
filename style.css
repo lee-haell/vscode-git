@@ -39,6 +39,7 @@ body {
   }
   
   .wrap {
+    position: relative;
     width: 360px;
     background-color: #000;
   }
@@ -56,12 +57,13 @@ body {
     display: none;
   }
 
-  .langBtnWrap {
-    cursor: pointer;
+  .dropDownWrap {
     justify-content: flex-end;
   }
   
-  .langCont {
+  .dropDownBtn {
+    position: relative;
+    height: 32px;
     border: .5px solid #fff;
     text-align: center;
     border-radius: 20px;
@@ -71,30 +73,140 @@ body {
     box-sizing: border-box;
   }
   
-  .langDownBtn {
-      position: relative;
-  }
-  
-  .langDownBtn::before {
+  .dropDownBtn::before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 22px;
-    width: 8px;
-    height: 1px;
+    right: 19px;
+    width: 7px;
+    height: 7px;
+    transform: translateY(-50%) rotate(-45deg);
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .dropDownMenu {
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    width: 100%;
+    background-color: #2b2b2b;
+    z-index: 1;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .dropDownMenu.active {
+    bottom: auto;
+    top: 0;
+  }
+
+  .dropDownListTitle {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .dropDownList {
+    padding: 19px 22px 13px 22px;
+  }
+
+  .dropDownList strong {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .dropDownList strong::before,
+    .dropDownList strong::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 15px;
     background-color: #fff;
+    /* transform: translateY(-50%); */
+  }
+
+  .dropDownList strong::before {
     transform: rotate(45deg);
+
   }
-  
-  .langDownBtn::after {
+
+  .dropDownList strong::after {
+    transform: rotate(-45deg);
+  }
+
+  .lang {
+    position: relative;
+    font-size: 14px;
+    color: #bcbcbc;
+    font-weight: 500;
+    justify-content: space-between;
+    padding-bottom: 28px;
+  }
+
+  .lang::before,
+  .lang::after {
     content: "";
     position: absolute;
-    top: 50%;
-    right: 16px;
-    width: 8px;
-    height: 1px;
+    width: 1px;
+    height: 13px;
+    top: 0;
+    right: 0;
     background-color: #fff;
-    transform: rotate(-45deg);
+  }
+
+  .lang::after {
+    transform: rotate(90deg);
+  }
+
+  .lang:last-child {
+    padding-bottom: 13px;
+  }
+
+  .langChoose {
+    padding: 0 13px;
+    margin-top: 13px;
+    background-color: #000;
+  }
+
+  .langList {
+    position: relative;
+    padding: 15px 0;
+    justify-content: space-between;
+  }
+
+  .langList.on {
+    color: #f32f2d;
+  }
+
+  .langList.on span {
+    text-decoration: underline;  
+}
+
+.langList.on::before {
+  background-color: #f32f2d;
+}
+
+  .langList::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #464646;
+  }
+
+  .langList p {
+    font-size: 10px;
+  }
+
+  .langList span {
+    font-size: 9px;
   }
 
   .logoWrap {
@@ -114,7 +226,6 @@ body {
     font-size: 12px;
     color: #a3a3a3;
     font-weight: bold;
-    cursor: pointer;
     margin: 5px 0 6px 0;
   }
 
@@ -175,7 +286,6 @@ body {
 
   .userPasswordGroup {
     position: relative;
-    cursor: pointer;
   }
 
   .passwordShowHide {
@@ -185,7 +295,17 @@ body {
   }
 
   .showHideImg {
+    background: url("/img/img_showHide.png") no-repeat 0 0;
+    background-size: 95%;
     width: 19px;
+    height: 19px;
+  }
+
+  .passwordShowHide.active .showHideImg {
+    background: url("/img/img_showHideActive.png") no-repeat 0 0;
+    background-size: 95%;
+    width: 19px;
+    height: 19px;
   }
 
 .myLgBtn {
@@ -194,7 +314,6 @@ body {
   background-color: #fff;
   border-radius: 5px;
   font-weight: bold;
-  cursor: pointer;
   justify-content: center;
   align-items: center;
 }
@@ -237,7 +356,6 @@ body {
 
 .anotherSnsBtn {
   text-align: center;
-  cursor: pointer;
 }
 
 .anotherSns {

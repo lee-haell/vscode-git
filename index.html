@@ -17,11 +17,50 @@
       - logo
     -->
     <header>
-      <div class="langBtnWrap flex">
-        <div class="langBtnInner">
-          <ul class="langCont">
-            <li>Korea, 한국어</li>
-            <li class="hide">English, 영어</li>
+      <div class="dropDownWrap flex">
+        <div class="dropDownInner">
+          <button id="dropDownBtn" class="dropDownBtn"></button>
+          <ul class="dropDownMenu hide">
+            <div class="dropDownList">
+              <li class="dropDownListTitle flex"><strong>국가/언어 선택</strong></li>
+              <li data-value="lang-ASIA & PACIFIC" class="lang">
+                <p>ASIA & PACIFIC</p>
+                <ul class="langChoose hide">
+                  <li class="langList flex"><p>Australia</p><span>English</span></li>
+                  <li class="langList flex"><p>Bangladesh</p><span>English</span></li>
+                  <li class="langList flex"><p>Cambodia</p><span>English</span></li>
+                  <li class="langList flex"><p>China</p><span>English</span></li>
+                  <li class="langList flex"><p>China</p><span>中國語</span></li>
+                  <li class="langList flex"><p>Hong Kong</p><span>English</span></li>
+                  <li class="langList flex"><p>Hong Kong</p><span>香港廣東話</span></li>
+                  <li class="langList flex"><p>India</p><span>English</span></li>
+                  <li class="langList flex"><p>Indonesia</p><span>English</span></li>
+                  <li class="langList flex"><p>Indonesia</p><span>Bahasa Indonesia</span></li>
+                  <li class="langList flex"><p>Japan</p><span>日本語</span></li>
+                  <li class="langList flex on"><p>Korea</p><span>한국어</span></li>
+                  <li class="langList flex"><p>Malaysia</p><span>English</span></li>
+                  <li class="langList flex"><p>Moldova</p><span>Română</span></li>
+                  <li class="langList flex"><p>Moldova</p><span>Русский</span></li>
+                  <li class="langList flex"><p>Myanmar</p><span>English</span></li>
+                  <li class="langList flex"><p>Nepal</p><span>English</span></li>
+                  <li class="langList flex"><p>New Zealand</p><span>English</span></li>
+                  <li class="langList flex"><p>Philippines</p><span>English</span></li>
+                  <li class="langList flex"><p>Singapore</p><span>English</span></li>
+                  <li class="langList flex"><p>Sri Lanka</p><span>English</span></li>
+                  <li class="langList flex"><p>Taiwan</p><span>English</span></li>
+                  <li class="langList flex"><p>Taiwan</p><span>繁體中文</span></li>
+                  <li class="langList flex"><p>Thailand</p><span>English</span></li>
+                  <li class="langList flex"><p>Thailand</p><span>ไท้</span></li>
+                  <li class="langList flex"><p>Vietnam</p><span>English</span></li>
+                  <li class="langList flex"><p>Vietnam</p><span>Tiếng Việt</span></li>
+                </ul>
+              </li>
+              <li data-value="lang-CIS" class="lang"><p>CIS</p></li>
+              <li data-value="lang-EUROPE" class="lang"><p>EUROPE</p></li>
+              <li data-value="lang-MIDDLE EAST & AFRICA" class="lang"><p>MIDDLE EAST & AFRICA</p></li>
+              <li data-value="lang-CENTRAL & SOUTH AMERICA" class="lang"><p>CENTRAL & SOUTH AMERICA</p></li>
+              <li data-value="lang-NORTH AMERICA" class="lang"><p>NORTH AMERICA</p></li>
+            </div> 
           </ul>
         </div>
         <div class="langDownBtn"></div>
@@ -45,7 +84,7 @@
         <div class="userPasswordGroup">
           <label for="userPassword">비밀번호</label>
           <input type="text" id="userPassword" name="userPassword" placeholder="비밀번호 입력">
-          <div class="passwordShowHide"><img src="/img/img_showHide.png" alt="비밀번호 가리기" class="showHideImg"></div>
+          <div class="passwordShowHide"><p class="showHideImg"></p></div>
         </div>
         <div class="loginBtnWrap">
           <button class="loginBtn">로그인</button>
@@ -63,7 +102,11 @@
       - sns button
     -->
     <footer class="myLgGroup">
-      <div>
+      <!--
+        // My LG ID login //
+        - sns login
+      -->
+      <div class="AlternativeLogin">
         <button class="myLgBtn flex"><span class="my">MY</span><span class="lg">LG</span><img src="/img/img_id.png" alt="id" class="imgId"><span class="myLgLogin">로그인</span></button>
         <div>
           <ul class="snsLoginWrap flex">
