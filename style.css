@@ -1,9 +1,14 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+/**
+
+  basic
+
+*/
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
 body {
     background: #222;
@@ -39,7 +44,13 @@ body {
   button {
     all: unset;
   }
-  
+
+
+  /**
+
+  공통
+
+*/
   .wrap {
     position: relative;
     width: 360px;
@@ -58,6 +69,13 @@ body {
   .hide {
     display: none;
   }
+
+
+  /**
+
+  Locale Dropdown
+
+  */
 
   .dropDownWrap {
     justify-content: flex-end;
@@ -98,10 +116,6 @@ body {
     border-radius: 20px 20px 0 0;
   }
 
-  /* .dropDownMenu.on {
-    bottom: 33px;
-  } */
-
   .dropDownMenu.active {
     bottom: auto;
   }
@@ -128,7 +142,7 @@ body {
   }
 
   .dropDownList strong::before,
-    .dropDownList strong::after {
+  .dropDownList strong::after {
     content: "";
     position: absolute;
     right: 0;
@@ -136,12 +150,10 @@ body {
     width: 1px;
     height: 15px;
     background-color: #fff;
-    /* transform: translateY(-50%); */
   }
 
   .dropDownList strong::before {
     transform: rotate(45deg);
-
   }
 
   .dropDownList strong::after {
@@ -196,8 +208,8 @@ body {
     text-decoration: underline;  
 }
 
-.langList.on::before {
-  background-color: #f32f2d;
+  .langList.on::before {
+    background-color: #f32f2d;
 }
 
   .langList::before {
@@ -217,6 +229,13 @@ body {
   .langList span {
     font-size: 9px;
   }
+
+
+  /**
+
+  Logo
+
+  */
 
   .logoWrap {
     padding: 28px 0 37px 0;
@@ -343,6 +362,13 @@ body {
 .lg {
   color: #9f0032;
 }
+
+
+/**
+
+footer
+
+*/
 
 .myLgLogin {
   color: #c94d80;
